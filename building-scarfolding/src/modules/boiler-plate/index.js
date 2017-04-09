@@ -5,21 +5,51 @@ if (process && process.env && process.env.CONSOLE_LOG) {
 import _ from 'lodash';
 
 const moduleRoot = document.createElement('div');
+moduleRoot.className = 'boiler-plate';
+
 import style from './style.less';
-import moduleFonts from './local-shares/fonts';
+moduleRoot.className = moduleRoot.ClassName + ` ${style['module-style']}`;
 
-moduleRoot.className = 'lab ' + style['module-style'];
-moduleRoot.innerHTML = '<h3>module-name: boiler-plate</h3>';
+// Module Title:
+    const elem_title = document.createElement('h3');
+    elem_title.innerHTML = 'module-name: boiler-plate';
+    moduleRoot.appendChild(elem_title);
 
-const elem_RobotoThin = document.createElement('p');
-elem_RobotoThin.className = 'roboto-thin';
-elem_RobotoThin.innerHTML = 'roboto-thin';
-moduleRoot.appendChild(elem_RobotoThin);
 
-const elem_RobotoLight = document.createElement('p');
-elem_RobotoLight.className = 'roboto-light';
-elem_RobotoLight.innerHTML = 'roboto-light';
-moduleRoot.appendChild(elem_RobotoLight);
+//sss --- testing fonts (Roboto)--- sss//
+    import moduleFonts from './local-shares/fonts';
+
+    const elem_RobotoThin = document.createElement('p');
+    elem_RobotoThin.className = 'roboto-thin';
+    elem_RobotoThin.innerHTML = 'roboto-thin';
+    moduleRoot.appendChild(elem_RobotoThin);
+
+    const elem_RobotoLight = document.createElement('p');
+    elem_RobotoLight.className = 'roboto-light';
+    elem_RobotoLight.innerHTML = 'roboto-light';
+    moduleRoot.appendChild(elem_RobotoLight);
+//eee --- testing fonts (Roboto)--- eee//
+
+
+//sss --- testing fonts (font awesome)--- sss//
+    // Font awasome is wrap in its name space, @TODO need to make this easier in the future
+
+    import {style_fontAwesome} from './local-shares/fonts';
+    moduleRoot.className = moduleRoot.className + ` ${style_fontAwesome['module-style']}`;
+
+    const elem_div_fontAwesome = document.createElement('div');
+
+    const elem_fontAwesomeSpinner = document.createElement('i');
+    elem_fontAwesomeSpinner.className = 'fa fa-circle-o-notch fa-spin fa-3x fa-fw';
+    elem_div_fontAwesome.appendChild(elem_fontAwesomeSpinner);
+
+    const elem_fontAwesomeAreaChart = document.createElement('i');
+    elem_fontAwesomeAreaChart.className = 'fa fa-area-chart';
+    elem_div_fontAwesome.appendChild(elem_fontAwesomeAreaChart);
+
+    moduleRoot.appendChild(elem_div_fontAwesome);
+//eee --- testing fonts (font awesome)--- eee//
+
 
 const elem_img = document.createElement("img");
 
@@ -31,7 +61,6 @@ moduleRoot.appendChild(elem_img);
 
 
 
-console.clear()
 //////////////////////////////////////////////////////////////
 // d3 testing
 

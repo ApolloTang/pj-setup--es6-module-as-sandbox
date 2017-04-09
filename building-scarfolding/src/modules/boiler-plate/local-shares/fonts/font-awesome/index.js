@@ -1,7 +1,7 @@
+
 if (process && process.env && process.env.CONSOLE_LOG) {
     console.info('log from file: src/common/fonts/font-awesome/index.js'); // eslint-disable-line no-console
 }
-
 
 const fonts = [
     'fontawesome-webfont.ttf',
@@ -12,4 +12,5 @@ fonts.forEach(font=>{
     require(`${pathToFont}`);
 });
 
-require('./font-awesome.css');
+import style_fontAwesome from './style.less';
+export default style_fontAwesome;

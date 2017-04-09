@@ -3,7 +3,10 @@ if (process && process.env && process.env.CONSOLE_LOG) {
 }
 
 require('./roboto/index.js');
-// require('./font-awesome/index.js');
+
+// Font Awesome required name space to work in local module
+import style_fontAwesome from './font-awesome/index.js';
+export {style_fontAwesome};
 
 
 
