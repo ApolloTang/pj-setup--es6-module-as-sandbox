@@ -17,6 +17,8 @@ const absolutePath_nodeModules = pathResolve('node_modules');
 
 const info = process.env.CONSOLE_LOG;
 
+const MOD_NAME = 'mod_name';
+
 const config_fn = env => {                                                  // [6]
     const {ifProd, ifNotProd} = getIfUtils(env);                            // [27]
 
@@ -47,8 +49,8 @@ const config_fn = env => {                                                  // [
             pathinfo: ifNotProd(),                                          // [35]
             path: absolutePath_buildFolder,                                 // [4]
             filename: ifProd(
-                'chart.[name].[chunkhash].js',                             // [9][22]
-                'chart.[name].[hash]js'                                    // [28]
+                MOD_NAME+'.[name].[chunkhash].js',                             // [9][22]
+                MOD_NAME+'.[name].[hash]js'                                    // [28]
             )
         },
         resolve: {
@@ -63,7 +65,8 @@ const config_fn = env => {                                                  // [
                 {
                     test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$/,           // [12]
                     loader: 'file-loader?name=./imgs/[name].[hash].[ext]',  // [13][21][23]
-                    exclude: pathResolve('src/common/fonts')                // [40]
+                    // exclude: pathResolve('src/common/fonts')                // [40]
+                    exclude: pathResolve('**/fonts')                // [40]
                 },
                 {
                     test: /\.(woff|woff2|ttf|eot|svg|otf)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,  // [38]
