@@ -7,8 +7,9 @@ import _ from 'lodash';
 const moduleRoot = document.createElement('div');
 moduleRoot.className = 'boiler-plate';
 
-import style from './style.less';
-moduleRoot.className = moduleRoot.ClassName + ` ${style['module-style']}`;
+import moduleStyle from './style.less';
+moduleRoot.className = moduleRoot.className + ` ${moduleStyle['module-style']}`;
+
 
 // Module Title:
     const elem_title = document.createElement('h3');
@@ -32,7 +33,7 @@ moduleRoot.className = moduleRoot.ClassName + ` ${style['module-style']}`;
 
 
 //sss --- testing fonts (font awesome)--- sss//
-    // Font awasome is wrap in its name space, @TODO need to make this easier in the future
+    // Font awasome is wrappred in its name space, @TODO need to make this easier in the future
 
     import {style_fontAwesome} from './local-shares/fonts';
     moduleRoot.className = moduleRoot.className + ` ${style_fontAwesome['module-style']}`;
