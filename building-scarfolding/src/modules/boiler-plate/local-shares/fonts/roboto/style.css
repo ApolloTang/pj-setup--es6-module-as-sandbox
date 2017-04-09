@@ -1,4 +1,4 @@
-/* +++++++++++++++++++++++++++++++++ style-file[start] src/common/fonts/roboto/index.css */
+/* s s s s s s s s s s s s s s s | style-file: modules/boiler-plate/local-shares/fonts/roboto/style.less */
 
 @font-face {
     font-family: 'RobotoThin';
@@ -42,4 +42,4 @@
          url('/fonts/Roboto-Black.ttf') format('truetype');
 }
 
-/* +++++++++++++++++++++++++++++++++ style-file[end] src/common/fonts/roboto/index.css */
+/* e e e e e e e e e e e e e e e | style-file: modules/boiler-plate/local-shares/fonts/roboto/style.less */
